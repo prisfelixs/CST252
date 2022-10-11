@@ -1,0 +1,19 @@
+body{
+  background-color: #d5dbde;
+}
+div#header{
+color: #647fb0;
+font-family: 'Silkscreen', cursive;
+}
+div#box{
+  width: auto content;
+  border: 8px solid #101F36;
+  padding: 20px;
+  margin: auto content;
+}
+.h2{
+  color:#647fb0;
+  border: 300px;
+padding: inherit;
+margin: auto;
+}
