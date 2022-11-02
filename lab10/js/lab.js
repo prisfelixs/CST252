@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
      console.log(itembox1);
 itembox1.
 
-itembox1.addEventListener('hover',outline);
+itembox1.addEventListener('hover',outlineElement);
 
 })
 //1. the exit button
