@@ -1,13 +1,24 @@
-var square = document.getElementById ("square");
-console.log(square);
-var str = "Click on button to change the background"
-square.innerHTML = str;
+document.addEventListener("DOMContentLoaded", () =>{
 
-function changeColor(red){
-document.body.style.background=red;
+console.log('pageloaded');
+let square = document.querySelector('.square');
 
+let squareHover = (e) => {
+
+  square.classList.add('square-end-frame', 'fadeInAnimation');
+  square.classList.remove('fadeOutAnimation');
 }
-function square2(){
-  changeColor('red');
 
+square.addEventListener('mouseover', squareHover);
+
+let squareOut = (e) =>{
+square.classList.remove('square-end-frame');
+square.classList.add('fadeOutAnimation');
+square.classList.remove('fadeInAnimation')
 }
+
+square.addEventListener('mouseout', squareOut);
+
+
+
+});
