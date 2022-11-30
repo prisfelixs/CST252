@@ -25,3 +25,19 @@ body{
   transition-property: background-color, width;
   transition-duration: 1s;
 }
+.hp{
+padding: 25px;  
+}
+#padding{
+padding: 20px;
+
+}
+.button{
+background-color: black;
+color: #c7b6d9;
+border-radius: 25px;
+}
+.button:hover{
+background-color: white;
+color: black;
+}
