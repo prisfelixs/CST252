@@ -12,44 +12,74 @@ courseName.textcontent = ("CST252");
      /////update the course name text
 
    }
-//What element triggers the event?
-//(button)
-//What is the event?
-//(click, mousing)
-//What should happen when the event happens?
-//
 
-//1. one of the course boxes
-//2. mouseover
-//3. The color of the box changes
-
-
-//1.one of the course boxes
-//2.mouseout
-//3.the box goes back to the way it was before
-
-
-//1. coursebox
-//2.click
-//3.the info panel shows up
-///////update the course name text
-//////update the course description
-/////change the picture
 document.addEventListener("DOMContentLoaded", () => {
+
+//hides info box
+ let infopanel = document.getElementById('infopanel');
+window.onload = function (){
+  document.getElementById("infopanel").style.dysplay = "none";
+}
+
+//below is the code that makes the borders thick when hovered on
 
      /////update the course description
      /////text to java script class
 
+
      let itembox1 = document.querySelector('.itembox1');
      console.log(itembox1);
-itembox1.
+itembox1.onmouseout = function(){
+  document.getElementById("itembox1").style.borderWidth =("thin");
 
-itembox1.addEventListener('hover',outlineElement);
+}
+itembox1.onmouseover = function (){
+  document.getElementById("itembox1").style.borderWidth=("thick");
 
-})
+}
+
+let itembox2 = document.getElementById('itembox2');
+itembox2.onmouseout = function (){
+document.getElementById("itembox2").style.borderWidth = ("thin");
+
+}
+itembox2.onmouseover=function(){
+  document.getElementById("itembox2").style.borderWidth =("thick");
+}
+
+//event that makes infobox appear with different image.
+let showInfoPanel1 = document.getElementById("itembox1").onclick = function(){
+  console.log("test1")
+  document.getElementById("courseimage").src ="images/cst252.jpg";
+  document.getElementById("infopanel").style.display = "block";
+  document.getElementById("cst252coursename").textcontent=('cst252:');
+  document.getElementById("cst252description").textcontent=('This class teaches you the basics of JavaScript');
+  document.getElementById("cst351coursename").style.display="none";
+  document.getElementById("cst351coursediscription").style.display="none";
+  document.getElementById("cst252coursename").style.display="block";
+  document.getElementById("cst252description").style.display="block";
+
+};
+let showInfoPanel2 = document.getElementById("itembox2").onclick = function (){
+  console.log("test2")
+  document.getElementById("courseimage").src ="images/cst351.jpg";
+  document.getElementById("infopanel").style.display = "block";
+  document.getElementById("cst351coursename").textcontent=('cst252:');
+  document.getElementById("cst351description").textcontent=('This class teaches you Web Design');
+  document.getElementById("cst252coursename").style.display="none";
+  document.getElementById("cst252coursediscription").style.display="none";
+  document.getElementById("cst351coursename").style.display="block";
+  document.getElementById("cst352description").style.display="block";
+
+};
+//event where onclick closes info panel.
+let infoClose= document.getElementById("exitcontainer").onclick=function(){
+  document.getElementById("infopanel1").style.display = "none";
+};
+
+
+});
 //1. the exit button
 //2. clicking
 //3. that info panel /popup hides
 /////(disappears)
-
-///oct10

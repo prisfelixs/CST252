@@ -29,13 +29,8 @@ function formatAndSortNames() {
 	newArray = [];
 
 	//Remember to Google what "split" does
-	splitNames = arrayOfNames[0].split(' ');
-	firstName = splitNames[0];
-	lastName = splitNames[1];
-	fixedName = lastName + ', ' + firstName;
-	newArray.push(fixedName);
 
-	splitNames = arrayOfNames[1].split(' ');
+	splitNames = arrayOfNames[1].split(' '), splitNames = finalName.split(' '),splitNames = arrayOfNames[0].split(' ');
 	firstName = splitNames[0];
 	lastName = splitNames[1];
 	fixedName = lastName + ', ' + firstName;
@@ -47,6 +42,11 @@ function formatAndSortNames() {
 	fixedName = lastName + ', ' + firstName;
 	newArray.push(fixedName);
 
+
+splitNames = arrayOfNames[0].split(' ');
+	lastName = splitNames[1];
+	fixedName = lastName + ', ' + firstName;
+	newArray.push(fixedName);
 	newArray.sort();
 	finalFixedName = newArray.pop();
 	//Reminder: Google what "join" does!
@@ -55,4 +55,4 @@ function formatAndSortNames() {
 
 	addToWebPage('Afterwards, the names are: ' + combinedFixedString);
 
-});
+}
